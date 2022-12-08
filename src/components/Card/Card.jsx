@@ -4,12 +4,11 @@ import React from "react";
 //IN HERE WE WILL BE CREATING THE TEMPLATE STRUCTURE FOR EACH CARD AND APPLYING PROPS TO POPULATE WHAT WILL GO IN EACH CARD
 
 const Card = (props) => {
-  const { name, description, image, abv, ph, firstBrewed } = props;
-
+  const { name, description, image_url, abv, ph, firstBrewed } = props.beer;
   return (
     <div className="beer-card">
       <div className="beer-card__image">
-        <img src={image} alt="Beer" />
+        <img src={image_url} alt="Beer" />
       </div>
       <div className="beer-card__info">
         <h2 className="beer-card__info--name">{name}</h2>

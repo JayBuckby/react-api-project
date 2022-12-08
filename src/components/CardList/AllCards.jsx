@@ -7,17 +7,7 @@ const AllCards = (props) => {
   const { beers } = props;
 
   return beers.map((beer) => {
-    return (
-      <Card
-        key={beer.id}
-        image={beer.image_url}
-        name={beer.name}
-        description={beer.description}
-        firstBrewed={beer.first_brewed}
-        abv={beer.abv}
-        ph={beer.ph}
-      />
-    );
+    return <Card beer={beer} />;
   });
 };
 

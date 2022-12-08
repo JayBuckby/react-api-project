@@ -1,7 +1,6 @@
 import "./App.scss";
 import React from "react";
 import NavBar from "./containers/NavBar/NavBar";
-import beers from "./assets/data/beers";
 import Main from "./containers/Main/Main";
 // import NavBar from "./containers/NavBar/NavBar";
 
@@ -10,8 +9,8 @@ import Main from "./containers/Main/Main";
 const App = () => {
   return (
     <div>
-      {/* <NavBar /> */}
-      <Main beers={beers} />
+      <NavBar />
+      <Main />
     </div>
   );
 };
