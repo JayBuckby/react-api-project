@@ -1,16 +1,15 @@
 import "./Main.scss";
-import { useState } from "react";
-import Card from "../../components/Card/Card";
+import AllCards from "../../components/CardList/AllCards";
+
+// IN HERE WE WILL BE TAKING ALL THE CARDS WE HAVE CREATED AND PLACING THEM IN A CONTAINER TO HOLD THEM
 
 const Main = (props) => {
-  const {} = props;
+  const { beers } = props;
   return (
     <div className="beer-page">
-      <header className="beer-header">
-        <h1>PUNK API</h1>
-        <p>For all your drinking needs!</p>
-      </header>
-      <Card />
+      <h1>PUNK API</h1>
+      <p>For all your drinking needs!</p>
+      <AllCards beers={beers} />
     </div>
   );
 };

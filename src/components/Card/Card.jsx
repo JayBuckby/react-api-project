@@ -1,18 +1,25 @@
 import "./Card.scss";
+import React from "react";
+
+//IN HERE WE WILL BE CREATING THE TEMPLATE STRUCTURE FOR EACH CARD AND APPLYING PROPS TO POPULATE WHAT WILL GO IN EACH CARD
 
 const Card = (props) => {
-  const { name, description, image, abv } = props;
+  const { name, description, image, abv, ph, firstBrewed } = props;
 
   return (
     <div className="beer-card">
-      <img className="beer-card__image">
-        {image}This is the picture of the beer
-      </img>
-      <h2 className="beer-card__name">{name}This is what the beer is called</h2>
-      <p className="beer-card__info">
-        {description}This is a description about the beer
-      </p>
-      <p className="beer-card__abv">{abv}This is the ABV of the beer</p>
+      <div className="beer-card__image">
+        <img src={image} alt="Beer" />
+      </div>
+      <div className="beer-card__info">
+        <h2 className="beer-card__info--name">{name}</h2>
+        <p className="beer-card__info--description">{description}</p>
+        <p className="beer-card__info--firstbrewed">
+          First Brewed in: {firstBrewed}
+        </p>
+        <p className="beer-card__info--abv">ABV = {abv}%</p>
+        <p className="beer-card__info--ph">Acidity Level = {ph}</p>
+      </div>
     </div>
   );
 };
