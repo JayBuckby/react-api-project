@@ -8,11 +8,16 @@ import Main from "./containers/Main/Main";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  console.log(searchTerm);
+  const [filterChoice, setFilterChoice] = useState("");
+
   return (
     <div>
-      <NavBar setSearchTerm={setSearchTerm} />
-      <Main searchTerm={searchTerm} />
+      <NavBar
+        setSearchTerm={setSearchTerm}
+        setFilterChoice={setFilterChoice}
+        filterChoice={filterChoice}
+      />
+      <Main searchTerm={searchTerm} filterChoice={filterChoice} />
     </div>
   );
 };
