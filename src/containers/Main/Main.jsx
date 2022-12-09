@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const Main = (props) => {
   const { searchTerm, filterChoice } = props;
-  const [newBeers, setNewBeers] = useState();
+  const [newBeers, setNewBeers] = useState([]);
 
   // delcare a isPH var here
 
@@ -22,7 +22,16 @@ const Main = (props) => {
     }
     const res = await fetch(url);
     const data = await res.json();
-    setNewBeers(data);
+
+    if (filterChoice == "High Acidity") {
+      const highAcidityBeers = data.filter((beer) => {
+        const phBeer = beer.ph > 4;
+        return phBeer;
+      });
+      setNewBeers(highAcidityBeers);
+    } else {
+      setNewBeers(data);
+    }
   };
   useEffect(() => {
     getNewBeers();
@@ -32,9 +41,8 @@ const Main = (props) => {
       <h1>PUNK API</h1>
       <p>For all your drinking needs!</p>
       {/* // pass is PH to ALLCARDS in all cards check if isPH == true, if is filter for ph */}
-      {newBeers ? <AllCards searchTerm={searchTerm} beers={newBeers} /> : ""}
+      <AllCards searchTerm={searchTerm} beers={newBeers} />
     </div>
   );
 };
-
 export default Main;
