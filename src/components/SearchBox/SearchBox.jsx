@@ -2,19 +2,13 @@ import "./SearchBox.scss";
 
 // IN HERE WE WILL BE CREATING THE INPUT FOR THE SEARCHBOX AND HOW IT WILL BE STRUCTURED
 
-import "./SearchBox.scss";
-
 const SearchBox = (props) => {
-  const { searchTerm, handleInput } = props;
+  const { setSearchTerm } = props;
+  const handleInput = (event) => {
+    const userSearch = event.target.value.toLowerCase();
+    setSearchTerm(userSearch);
+  };
 
-  return (
-    <input
-      className="searchbox"
-      type="text"
-      value={searchTerm}
-      onInput={handleInput}
-    />
-  );
+  return <input className="searchbox" type="text" onInput={handleInput} />;
 };
-
 export default SearchBox;
