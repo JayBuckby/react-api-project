@@ -14,11 +14,11 @@ const AllCards = (props) => {
 
   if (searchTerm) {
     return getFilteredBeers().map((beer) => {
-      return <Card beer={beer} />;
+      return <Card className="beer-cards" beer={beer} />;
     });
   } else {
     return beers.map((beer) => {
-      return <Card beer={beer} />;
+      return <Card className="beer-cards" beer={beer} />;
     });
   }
 };
