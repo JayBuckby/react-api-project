@@ -4,7 +4,7 @@ import FilterItem from "../FilterItem/FilterItem";
 const FiltersList = (props) => {
   const { setFilterChoice, filterChoice } = props;
   return (
-    <div>
+    <div className="checkboxes">
       <FilterItem
         text="High Alcohol"
         filterChoice={filterChoice}

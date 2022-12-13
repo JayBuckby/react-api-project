@@ -1,3 +1,25 @@
+@use "./assets/scss/variables" as *;
+
 .page-contents {
-  background: bisque;
+  background: linear-gradient(to right, #ec6f66, #f3a183);
+  font-size: 1rem;
+  h1,
+  h2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-contents {
+    display: flex;
+    h1,
+    h2 {
+      display: none;
+    }
+  }
+  .beer-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
 }

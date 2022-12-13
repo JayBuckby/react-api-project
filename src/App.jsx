@@ -9,14 +9,15 @@ const App = () => {
 
   return (
     <div className="page-contents">
+      <h1>Punk API</h1>
+      <h2>For all your drinking needs!</h2>
       <NavBar
-        className="nav-bar"
         setSearchTerm={setSearchTerm}
         setFilterChoice={setFilterChoice}
         filterChoice={filterChoice}
       />
       <Main
-        className="main-beers"
+        className="beer-cards"
         searchTerm={searchTerm}
         filterChoice={filterChoice}
       />

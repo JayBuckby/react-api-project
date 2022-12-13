@@ -13,8 +13,8 @@ const FilterItem = (props) => {
 
   return (
     <div>
-      <input type="checkbox" onChange={handleClick} />
-      <p>{text}</p>
+      <input type="checkbox" onChange={handleClick} name={text} />
+      <label htmlFor={text}>{text}</label>
     </div>
   );
 };

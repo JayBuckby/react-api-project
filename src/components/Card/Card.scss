@@ -1,8 +1,19 @@
-.beer-card {
-  height: 300px;
-  width: 300px;
-}
+@use "../../assets/scss/variables" as *;
+
 img {
-  height: 10px;
-  width: 10px;
+  height: 300px;
+  width: 75px;
+}
+.beer-card {
+  display: flex;
+  flex-direction: row-reverse;
+  border-top: 3px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+  .beer-card {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 2.5px solid black;
+  }
 }

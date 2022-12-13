@@ -11,7 +11,7 @@ const Card = (props) => {
         <img src={image_url} alt="Beer" />
       </div>
       <div className="beer-card__info">
-        <h2 className="beer-card__info--name">{name}</h2>
+        <h3 className="beer-card__info--name">{name}</h3>
         <p className="beer-card__info--description">{description}</p>
         <p className="beer-card__info--firstbrewed">
           First Brewed in: {first_brewed}

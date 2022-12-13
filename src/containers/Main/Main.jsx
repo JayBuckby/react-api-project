@@ -34,8 +34,6 @@ const Main = (props) => {
 
   return (
     <div className="beer-cards">
-      <h1>PUNK API</h1>
-      <p>For all your drinking needs!</p>
       <AllCards searchTerm={searchTerm} beers={newBeers} />
     </div>
   );

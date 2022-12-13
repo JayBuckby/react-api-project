@@ -7,12 +7,16 @@ const NavBar = (props) => {
   const { setSearchTerm, setFilterChoice, filterChoice } = props;
 
   return (
-    <div>
-      <SearchBox setSearchTerm={setSearchTerm} />
+    <div className="nav-bar">
+      <h1>Punk API</h1>
+      <h2>For all your drinking needs!</h2>
+      <h4>Would you like to filter your options?</h4>
       <FiltersList
         setFilterChoice={setFilterChoice}
         filterChoice={filterChoice}
       />
+      <h4>Or search for something?</h4>
+      <SearchBox setSearchTerm={setSearchTerm} />
     </div>
   );
 };
