@@ -4,7 +4,7 @@ const FilterItem = (props) => {
   const { text, setFilterChoice, filterChoice } = props;
 
   const handleClick = () => {
-    if (filterChoice == text) {
+    if (filterChoice === text) {
       setFilterChoice("");
     } else {
       setFilterChoice(text);
