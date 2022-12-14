@@ -9,11 +9,11 @@ const Main = (props) => {
   const getNewBeers = async () => {
     let url = "";
     if (filterChoice === "High Alcohol") {
-      url = `https://api.punkapi.com/v2/beers/?abv_gt=6`;
+      url = `https://api.punkapi.com/v2/beers?per_page=80&abv_gt=6`;
     } else if (filterChoice === "Classic Range") {
-      url = `https://api.punkapi.com/v2/beers/?brewed_before=12-2010`;
+      url = `https://api.punkapi.com/v2/beers?per_page=80&brewed_before=12-2010`;
     } else {
-      url = `https://api.punkapi.com/v2/beers/`;
+      url = `https://api.punkapi.com/v2/beers?per_page=80`;
     }
     const res = await fetch(url);
     const data = await res.json();
