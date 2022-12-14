@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <div className="page-contents">
-      <h1>Punk API</h1>
+      <h1 data-testid="title">Punk API</h1>
       <h2>For all your drinking needs!</h2>
       <NavBar
         setSearchTerm={setSearchTerm}
