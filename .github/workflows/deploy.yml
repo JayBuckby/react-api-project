@@ -7,6 +7,8 @@ on:
 
 jobs:
   test:
+    env:
+      CI: false
     name: Deploying
     runs-on: ubuntu-latest
     steps:
